@@ -4,7 +4,7 @@ npm i minify@7.0.0 -g
 apt-get update
 apt-get -y install moreutils
 
-find . -type f \(-o -iname \*.js -o -iname \*.css \) | while read fname
+find . -type f \(-iname \*.js -o -iname \*.css \) | while read fname
     do
     minify ${fname} | sponge ${fname}
     done
